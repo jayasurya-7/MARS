@@ -1,6 +1,6 @@
 # Migration coverage and validation
 
-The unified Godot project now contains all nine games and application screens for patient configuration, prescriptions, import, device connection/setup/calibration, training plane, range assessments, arm-weight assessment, diagnostics, trial summaries, and upload/session-service configuration.
+The unified Godot project now contains all sixteen games and application screens for patient configuration, prescriptions, device connection/setup/calibration, training plane, range assessments, arm-weight assessment, diagnostics, trial summaries, and upload/session-service configuration.
 
 ## Implemented integration
 
@@ -8,19 +8,19 @@ The unified Godot project now contains all nine games and application screens fo
 - JEDI frame buffering, fragmentation, checksum validation, sensor/diagnostic decoding, heartbeat and watchdog.
 - Device commands and button events; explicit activation, calibration and plane actions.
 - Original forward kinematics, handedness mapping, calibrated ranges and telemetry logging.
-- Profiles, prescription gates, range and weight recording, legacy-shaped CSVs, patient import, summary and daily stars.
+- Profiles, prescription gates, range and weight recording, legacy-shaped CSVs, summary and daily stars.
 - 60-second trial controller, adaptive reach speed, special Table Wiping scrub-area adaptation, pause and close saving.
-- Nine playable games; source artwork reused where available; shared saved-results screen and post-trial Fireworks finale.
+- Sixteen playable games; source artwork reused where available; shared saved-results screen and post-trial Fireworks finale.
 - Configurable invocation of the installed AWS uploader and NeuroDash sender; optional local session-agent protocol.
 - Portable Windows packaging plus source project and automated tests.
 
 ## Verified here
 
-- All nine games launch, pause, save and finish at the trial boundary.
+- All sixteen games launch, pause, save and finish at the trial boundary.
 - Added-game success/miss events, duplicate resolution prevention, speed persistence and CSV widths.
 - Legacy-game hold resets and thresholds, paddle/opponent returns, matching-colour catches, flight opening, stain-alpha clearing and stationary firing.
 - Packet framing/checksum recovery, numeric decoding, command byte layout, kinematics and watchdog hold using synthetic packets.
-- Patient/assessment persistence, import-overwrite rejection, device-start gates and measured telemetry columns using test fixtures.
+- Patient/assessment persistence, device-start gates and measured telemetry columns using test fixtures.
 - Windows serial bridge authentication and missing-port reporting through nonexistent COM9999.
 - Graphical checks of every game and all workflow screens.
 
