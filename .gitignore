@@ -1,0 +1,52 @@
+# ---- Godot ----
+# Editor cache and imported-asset cache (rebuilt automatically)
+**/.godot/
+# Editor settings and templates copied into the project folder
+Godot/.vscode/
+Godot/export_templates/
+Godot/feature_profiles/
+Godot/script_templates/
+Godot/text_editor_themes/
+# Test screenshots, renders and scratch data
+**/test-output/
+# Local app data created while running or testing
+**/.local-data/
+
+# ---- Builds ----
+# Portable builds and releases
+dist/
+# Exported binaries, installers and archives
+*.exe
+*.dll
+*.pck
+*.zip
+*.apk
+*.aab
+
+# ---- Local tools and data ----
+# Downloaded Godot binaries, verification tools and logs (can contain keys)
+**/.tools/
+# Patient data and local notes
+/private/
+/data/
+*.log
+*.tmp
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- OS / editor noise ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vs/
+*.user
+*.suo
+
+# Standalone mini-game projects that live in their own repositories (copies ship in Godot/games)
+/bubble-sparkle/
+/fire-works/
+/fish-rescue/

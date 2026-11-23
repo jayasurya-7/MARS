@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://games/sorting/scripts/GameManager.gd" id="1_gm"]
+[ext_resource type="Script" path="res://games/sorting/scripts/Background.gd" id="2_bg"]
+[ext_resource type="Script" path="res://games/sorting/scripts/ItemPool.gd" id="3_pool"]
+[ext_resource type="Script" path="res://games/sorting/scripts/DropZone.gd" id="4_zone"]
+[ext_resource type="Script" path="res://games/sorting/scripts/GameHud.gd" id="5_hud"]
+[ext_resource type="Script" path="res://games/sorting/scripts/RobotCursor.gd" id="6_cur"]
+[ext_resource type="Script" path="res://games/sorting/scripts/Mascot.gd" id="7_mascot"]
+[ext_resource type="Script" path="res://games/sorting/scripts/StickerShelf.gd" id="8_shelf"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_gm")
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource("2_bg")
+
+[node name="Pool" type="Node2D" parent="."]
+position = Vector2(60, 520)
+script = ExtResource("3_pool")
+
+[node name="Bins" type="Node2D" parent="."]
+
+[node name="Bin_Car" type="Area2D" parent="Bins"]
+position = Vector2(270, 185)
+script = ExtResource("4_zone")
+category_id = "toy_car"
+display_name = "Toy Cars"
+accent = Color(1, 0.42, 0.36, 1)
+
+[node name="Bin_Book" type="Area2D" parent="Bins"]
+position = Vector2(730, 185)
+script = ExtResource("4_zone")
+category_id = "book"
+display_name = "Books"
+accent = Color(0.36, 0.62, 1, 1)
+
+[node name="Bin_Clothes" type="Area2D" parent="Bins"]
+position = Vector2(1190, 185)
+script = ExtResource("4_zone")
+category_id = "clothes"
+display_name = "Clothes"
+accent = Color(0.3, 0.85, 0.6, 1)
+
+[node name="Bin_Plush" type="Area2D" parent="Bins"]
+position = Vector2(1650, 185)
+script = ExtResource("4_zone")
+category_id = "stuffed_animal"
+display_name = "Stuffed Toys"
+accent = Color(1, 0.74, 0.3, 1)
+
+[node name="Mascot" type="Node2D" parent="."]
+position = Vector2(1790, 440)
+scale = Vector2(0.9, 0.9)
+script = ExtResource("7_mascot")
+
+[node name="Shelf" type="Node2D" parent="."]
+position = Vector2(960, 1050)
+script = ExtResource("8_shelf")
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 10
+script = ExtResource("5_hud")
+
+[node name="CursorLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Cursor" type="Node2D" parent="CursorLayer"]
+script = ExtResource("6_cur")
